@@ -1,3 +1,5 @@
+#Based on https://www.reddit.com/r/unixporn/comments/69008j/i3gaps_1984/
+
 from __future__ import (absolute_import, division, print_function)
 
 from ranger.colorschemes.default import Default
