@@ -1,7 +1,3 @@
-!Based on https://www.reddit.com/r/unixporn/comments/69008j/i3gaps_1984/
-
-!https://wiki.archlinux.org/index.php/Rxvt-unicode#Font_declaration_methods
-*.font: xft:Roboto Mono:size=11
 Xft.dpi:                        96
 Xft.antialias:                  1
 Xft.hinting:                    1
@@ -9,10 +5,12 @@ Xft.hintstyle:                  hintslight
 Xft.lcdfilter:                  lcdlight
 Xft.rgba:                       rgb
 
+Emacs.font:			Roboto Mono:size=14
+
+URxvt.font:			xft:Roboto Mono:size=12
 URxvt*termName:                 rxvt-256color
 URxvt.depth:                    32
 URxvt*lineSpace:                1
-URxvt.letterSpace:              -1
 URxvt.iso14755:                 false
 URxvt.iso14755_52:              false
 URxvt*geometry:                 110x50
@@ -21,17 +19,15 @@ URxvt*loginShell:               true
 URxvt.internalBorder:           30
 URxvt.secondaryScreen:		true
 
-!https://wiki.archlinux.org/index.php/Rxvt-unicode#Clickable_URLs
 URxvt.perl-ext:	 		default,matcher
 URxvt.url-launcher:             chromium
 URxvt.matcher.button: 		1
 
-!https://wiki.archlinux.org/index.php/Rxvt-unicode#Simple_tabs
-!https://wiki.archlinux.org/index.php/Rxvt-unicode#Fullscreen
 URxvt.perl-ext-common: tabbed,fullscreen
 URxvt.keysym.F11: perl:fullscreen:switch
 
-
+!Seemingly you need to not use --nocpp in Xsession xrdb to use define directives
+!See https://github.com/chriskempson/base16-xresources/issues/8
 #define base00 #292D3E
 #define base01 #444267
 #define base02 #32374D
@@ -56,40 +52,31 @@ URxvt.keysym.F11: perl:fullscreen:switch
 ! black
 *.color0:       base00
 *.color8:       base03
-
 ! red
 *.color1:       base08
 *.color9:       base08
-
 ! green
 *.color2:       base0B
 *.color10:      base0B
-
 ! yellow
 *.color3:       base0A
 *.color11:      base0A
-
 ! blue
 *.color4:       base0C
 *.color12:      base0C
-
 ! magenta
 *.color5:       base0E
 *.color13:      base0E
-
 ! cyan
 *.color6:       base0C
 *.color14:      base0C
-
 ! white
 *.color7:       base07
 *.color15:      base07
 
 rofi.color-enabled: true
-rofi.color-window: #141021, #c16772, #9568a1
-rofi.color-normal: #141021, #ffeefc, #312842, #c16772, #ffeefc
-rofi.color-active: #141021, #c05c47, #312842, #c05c47, #ffeefc
-rofi.color-urgent: #141021, #e4b226, #312842, #e4b226, #ffeefc
+rofi.color-window: base02, base08
+rofi.color-normal: base01, base05, base02, base08, base07
 rofi.width: 800
 rofi.padding: 30
 rofi.font: Roboto Mono:size 14
