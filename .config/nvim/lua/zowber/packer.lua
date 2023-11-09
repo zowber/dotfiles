@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
 			-- Autocompletion
 			{'hrsh7th/nvim-cmp'},
 			{'hrsh7th/cmp-nvim-lsp'},
+            {'rafamadriz/friendly-snippets'},
 			{'L3MON4D3/LuaSnip'},
 		}
     }
@@ -26,4 +27,5 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme everforest')
         end
     })
+    use { 'folke/which-key.nvim', opts = {} }
 end)
