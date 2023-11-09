@@ -1,2 +1,1 @@
-# My dotfiles
-.conf 'n' stuff
+🚨 conf 🚨
